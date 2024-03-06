@@ -2,28 +2,32 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #222; /* Fond de couleur sombre */
-  color: #fff; /* Couleur du texte */
+  background-color: #222;
+  color: #fff;
   margin: 0;
   padding: 0;
-  background-image: url('OIG3.jpg'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+  background-image: url('OIG3.jpg');
   background-repeat: no-repeat;
-  background-position: top left;
+  background-size: cover;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 600px;
-  margin: 10px auto; 
-  background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  text-align: center; /* Centrer le contenu */
+  text-align: center;
 }
 
 h1 {
-  font-family: 'Impact', sans-serif; /* Police d'écriture en rapport avec un jeu de culture générale */
+  font-family: 'Impact', sans-serif;
   font-size: 36px;
   margin-bottom: 20px;
 }
@@ -31,77 +35,82 @@ h1 {
 #question-container {
   margin-bottom: 20px;
   font-size: 2em;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
 }
 
 #answer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin-bottom: 20px;
-  font-size: 3em;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  font-size: 2em;
 }
 
 button {
-  padding: 15px 30px; /* Boutons suffisamment grands */
+  padding: 20px;
   margin: 5px;
-  font-size: 18px;
+  font-size: 24px;
   color: #fff;
   border: solid 3px whitesmoke;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  width: 200px; /* Largeur fixe pour que tous les boutons aient la même taille */
-  background-color: transparent; /* Fond transparent */
+  background-color: transparent;
 }
-#add-participant-btn{
-  color: #fff;
-  border: solid 1px whitesmoke;
-  border-radius: 5px;
-  cursor: pointer;
-  width: auto;
-  background-color: transparent; /* Fond transparent */
-}
-.add-point-btn{
-  color: #fff;
-  border: solid 1px whitesmoke;
-  border-radius: 5px;
-  cursor: pointer;
-  width: auto;
-  background-color: transparent; /* Fond transparent */
-}
-.subtract-point-btn{
-  color: #fff;
-  border: solid 1px whitesmoke;
-  border-radius: 5px;
-  cursor: pointer;
-  width: auto;
-  background-color: transparent; /* Fond transparent */
-}
+
 button:hover {
   background-color: #0056b3;
 }
 
-#next-btn, #show-answer-btn, #square-btn {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #024995;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 150px;
+#next-btn, #show-answer-btn, #square-btn, #add-participant-btn, .add-point-btn, .subtract-point-btn {
+  padding: 20px;
   margin: 5px;
+  font-size: 24px;
+  color: #fff;
+  border: solid 3px whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-#next-btn:hover, #show-answer-btn:hover, #square-btn:hover {
+#next-btn:hover, #show-answer-btn:hover, #square-btn:hover, #add-participant-btn:hover, .add-point-btn:hover, .subtract-point-btn:hover {
   background-color: #0056b3;
 }
 
 .correct {
   color: rgb(27, 201, 27);
-  font-size: 3em; /* Taille de police plus grande pour les réponses correctes */
+  font-size: 54px !important; 
 }
 
 .incorrect {
   color: red;
-  font-size: 3em; /* Taille de police normale pour les réponses incorrectes */
+  font-size: 34px !important;
+}
+
+#participants input[type="text"] {
+  padding: 20px;
+  margin: 5px;
+  font-size: 24px;
+}
+
+#score-table {
+  width: 90%;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+#score-table th, #score-table td {
+  padding: 20px;
+  font-size: 24px;
+}
+
+#score-table button {
+  padding: 5px 5px;
+  margin: 5px;
+  font-size: 18px;
 }
