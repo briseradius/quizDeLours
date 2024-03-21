@@ -205,6 +205,7 @@
         function subtractPoint(row) {
             const pointsCell = row.querySelector('td:nth-child(2)');
             let points = parseInt(pointsCell.textContent);
+            //decomenter le if pour empecher les scores negatifs
             //if (points > 0) 
             {
                 points--;
