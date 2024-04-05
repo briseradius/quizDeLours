@@ -93,7 +93,7 @@ button:hover {
   font-size: 34px !important;
 }
 
-#participants input[type="text"] {
+#participants  {
   padding: 20px;
   margin: 5px;
   font-size: 24px;
@@ -115,4 +115,57 @@ button:hover {
   padding: 5px 5px;
   margin: 5px;
   font-size: 18px;
+}
+/* Adaptation pour les écrans de smartphone */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #participants  {
+    display: none;
+    }
+  h1 {
+    font-size: 24px;
+  }
+
+  #question-container {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+
+  #answer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-size: 1.5em;
+  }
+
+  button {
+    padding: 15px;
+    margin: 5px;
+    font-size: 18px;
+  }
+
+  #next-btn,
+  #show-answer-btn,
+  #square-btn {
+    padding: 15px;
+    margin: 5px;
+    font-size: 18px;
+  }
+
+  #score-table {
+    display: none; /* Pour masquer le tableau sur les écrans de smartphone */
+  }
 }
