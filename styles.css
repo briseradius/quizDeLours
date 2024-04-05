@@ -31,7 +31,9 @@ h1 {
   font-size: 36px;
   margin-bottom: 20px;
 }
-
+.color{
+  background-color: bisque;
+}
 #question-container {
   margin-bottom: 20px;
   font-size: 2em;
