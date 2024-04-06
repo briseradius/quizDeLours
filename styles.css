@@ -34,6 +34,10 @@ h1 {
 .color{
   background-color: bisque;
 }
+.flex{
+  display: flex;
+}
+
 #question-container {
   margin-bottom: 20px;
   font-size: 2em;
